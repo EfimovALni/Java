@@ -11,11 +11,11 @@ public class Oop_ {
         OutputStream outputStream = new FileOutputStream("D:/Result.txt");
 
         while (inputStream.available() > 0 ) {
-            int data = inputStream.read();
-            outputStream.write(data);
+            int data = inputStream.read(); //читаем один байт из потока для чтения
+            outputStream.write(data); //записываем прочитанный байт в другой поток.
         }
 
-        inputStream.close();
+        inputStream.close();  //закрываем потоки
         outputStream.close();
     }
 }
